@@ -17,6 +17,7 @@ module.exports = {
         // separate "Bearer" from "<tokenvalue>"
         if (req.headers.authorization) {
           token = token
+          //we are splitting at a space between the bearer and token so you need a space between the quotes
             .split(' ')
             .pop()
             .trim();
